@@ -23,4 +23,9 @@ class SongTest<MiniTest::Test
     assert_equal("Pop", @song1.genre)
   end
 
+  def test_add_iv_genre_to_song_object_v2
+    song2 = Song.new("Hippy Dippy", "Donovan", "Folk")
+    assert_equal("Folk", song2.genre)
+  end
+
 end

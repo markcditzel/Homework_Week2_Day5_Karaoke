@@ -1,19 +1,11 @@
 class Room
 
-  attr_reader :name, :customers
+  attr_reader :room_name, :room_customers, :song_list
 
-  def initialize(arg_room_name)
-    @name = arg_room_name
-    @customers = []
-    @song_list = []
-  end
-
-  def customer_count_in_room
-    @customers.count
-  end
-
-  def add_customers_to_room(customer)
-    @customers << customer
+  def initialize(input_room_name)
+    @room_name = input_room_name
+    @room_customers = [] # contain an array of customers
+    @song_list = [] # to contain an array of objects
   end
 
 end
