@@ -1,6 +1,6 @@
 require('minitest/autorun')
-require('minitest/rg')
-require_relative('')
+#require('minitest/rg')
+require_relative('../customer.rb')
 
 
 # Specifically, they want you to build a software for checking guests in and out, plus handling songs.
@@ -11,11 +11,15 @@ require_relative('')
 
 class CustomerTest < MiniTest::Test
 
-def setup
-  @customer1 = Customer.new(first_name, last_name)
-
-  def test_can_create_Customer
-    assert_equal (Customer, @customer.class)
+  def setup
+    @customer1 = Customer.new("Morag Martin")
   end
 
+  def test_can_create_Customer_name
+    assert_equal("Morag Martin", @customer1.name)
+  end
+
+  def test_can_create_Customer_class
+    assert_equal(Customer, @customer1.class)
+  end
 end
